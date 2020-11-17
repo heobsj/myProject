@@ -9,23 +9,27 @@ int main() {
 	int num = 0, num1 = 0, num2 = 0, type = 0;
 	char ch = 0;
 
+	/** 첫 대사
+	  */
 	script_First();
 	
+	/** num1 입력
+	  */
 	num1 = num_Input(num1);
-	//printf("%d%d%d%d%d%d\n", num1, num1, num1, num1, num1, num1);
-
 	getchar();
 	
+	/** 연산자 입력
+	  */
 	type = calc_Type(type);
-	//printf("%d%d%d%d%d%d\n", type, type, type, type, type, type);
-
 	getchar();
 
+	/** num2 입력
+	  */
 	num2 = num_Input(num2);
-	//printf("%d%d%d%d%d%d\n", num2, num2, num2, num2, num2, num2);
+	getchar();
 	
-	//calculate = calc_Add; num = calculate(num1, num2);
-	
+	/** num1 연산자 num2 계산
+	  */
 	switch (type) {
 	case 1: calculate = calc_Add; num = calculate(num1, num2);  break;
 	case 2: calculate = calc_Sub; num = calculate(num1, num2);  break;
@@ -34,21 +38,13 @@ int main() {
 	default: return 0;
 	}
 	
-	printf("결과  :  %d\n", num);
+	/** 결과 출력
+	  */
+	num_Output(num);
 	
+	/** 마지막 대사
+	  */
 	script_Last();
-
-	//num_Input(num);
-	/*
-	printf("%d\n", num_Input(num));
-	printf("%d%d%d%d%d%d\n", num,num,num,num,num,num);
-	calc_Type();
-	*/
-	/*
-	printf("숫자 입력   연산자 입력   숫자 입력 : \n");
-	scanf("%d   %c   %d\n", &num1, &s, &num2);
-	printf("%d   %c   %d\n", num1, s, num2);
-	*/
 
 	return 0;
 }
