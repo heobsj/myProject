@@ -3,10 +3,12 @@
 #pragma warning(disable : 4996)
 
 int (*calculate)(int num1, int num2);
+double (*dcalculate)(int num1, int num2);
 
 int main() {
 
 	int num = 0, num1 = 0, num2 = 0, type = 0;
+	double dnum = 0;
 	char ch = 0;
 
 	/** 첫 대사
@@ -31,17 +33,17 @@ int main() {
 	/** num1 연산자 num2 계산
 	  */
 	switch (type) {
-	case 1: calculate = calc_Add; num = calculate(num1, num2);  break;
-	case 2: calculate = calc_Sub; num = calculate(num1, num2);  break;
-	case 3: calculate = calc_Mul; num = calculate(num1, num2);  break;
-	case 4: calculate = calc_Div; num = calculate(num1, num2);  break;
+	case 1: calculate = calc_Add; num = calculate(num1, num2); break;
+	case 2: calculate = calc_Sub; num = calculate(num1, num2); break;
+	case 3: calculate = calc_Mul; num = calculate(num1, num2); break;
+	case 4: dcalculate = calc_Div; dnum = dcalculate(num1, num2); break;
 	default: return 0;
 	}
 	
 	/** 결과 출력
 	  */
-	num_Output(num);
-	
+	num_Output(num, dnum, type);
+
 	/** 마지막 대사
 	  */
 	script_Last();

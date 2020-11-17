@@ -22,7 +22,7 @@ int calc_Sub(int a, int b) {
 int calc_Mul(int a, int b) {
 	return a * b;
 }
-int calc_Div(int a, int b) {
+double calc_Div(int a, int b) {
 	return (double)a / b;
 }
 
@@ -52,6 +52,12 @@ int calc_Type(int num) {
 
 /** 결과 출력
   */
-void num_Output(int num) {
-	printf("결과  :  %d\n", num);
+void num_Output(int num1, double num2, int type) {
+
+	if (type = 4) {
+		printf("결과  :  %f\n", num2);
+	}
+	else {
+		printf("결과  :  %d\n", num1);
+	}
 }
