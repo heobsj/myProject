@@ -45,6 +45,16 @@ int calc_Type(int num) {
 	default: return 0;
 	}
 }
+/*
+// 연산
+int calculate_what(int num1, int type, int num2) {
+
+}
+*/
+
+
+
+
 
 // 숫자 연산자 구조체
 struct Input {
