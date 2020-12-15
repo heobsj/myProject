@@ -2,16 +2,11 @@
 #include <stdio.h>
 #pragma warning(disable : 4996)
 
-/** °è»ê±â ´ë»ç
+/** ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
   */
-void script_First() {
-	printf("»çÄ¢¿¬»ê ½ÃÀÛ\n");
-}
-void script_Last() {
-	printf("»çÄ¢¿¬»ê ³¡\n");
-}
 
-/** »çÄ¢¿¬»ê
+
+/** ï¿½ï¿½Ä¢ï¿½ï¿½ï¿½ï¿½
   */
 int calc_Add(int a, int b) {
 	return a + b;
@@ -26,20 +21,29 @@ int calc_Div(int a, int b) {
 	return (double)a / b;
 }
 
-/** ¼ýÀÚ ÀÔ·Â
+
+void script_First() {
+	printf("ï¿½ï¿½Ä¢ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½\n");
+}
+void script_Last() {
+	printf("ï¿½ï¿½Ä¢ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½\n");
+}
+
+
+/** ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½
   */
 int num_Input(int num) {
-	printf("¼ýÀÚ ÀÔ·Â  :  ");
+	printf("ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½  :  ");
 	scanf("%d", &num);
-	//fflush(stdin); Áý¿¡¼­ ±¸¹öÀüÀ¸·Î ÇÒ ¶§´Â ÀÛµ¿
+	//fflush(stdin); ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ûµï¿½
 	return num;
 }
 
-/** ¿¬»êÀÚ ÀÔ·Â
+/** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½
   */
 int calc_Type(int num) {
 	char s;
-	printf("¿¬»êÀÚ ÀÔ·Â  :  ");
+	printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½  :  ");
 	scanf("%c", &s);
 	switch (s) {
 	case '+': num = 1; return num;
@@ -50,8 +54,8 @@ int calc_Type(int num) {
 	}
 }
 
-/** °á°ú Ãâ·Â
+/** ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
   */
 void num_Output(int num) {
-	printf("°á°ú  :  %d\n", num);
+	printf("ï¿½ï¿½ï¿½  :  %d\n", num);
 }
